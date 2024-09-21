@@ -17,7 +17,7 @@ namespace GameStore.Application.Services
             return await _repository.GetAllAsync();
         }
 
-        public async Task<T> GetByIdAsync(int id)
+        public async Task<T> GetByIdAsync(Guid id)
         {
             return await _repository.GetByIdAsync(id);
         }
@@ -32,7 +32,7 @@ namespace GameStore.Application.Services
             await _repository.UpdateAsync(entity);
         }
 
-        public async Task DeleteAsync(int id)
+        public async Task DeleteAsync(Guid id)
         {
             await _repository.DeleteAsync(id);
         }

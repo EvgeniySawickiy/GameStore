@@ -14,7 +14,7 @@ namespace GameStore.Application.Services
             _gameRepository = gameRepository;
         }
 
-        public async Task<IEnumerable<GameEntity>> GetGamesByCategoryAsync(int categoryId)
+        public async Task<IEnumerable<GameEntity>> GetGamesByCategoryAsync(Guid categoryId)
         {
             return await _gameRepository.GetGamesByCategoryAsync(categoryId);
         }

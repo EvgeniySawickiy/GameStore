@@ -9,7 +9,7 @@ namespace GameStore.Core.Interfaces.Services
 {
     public interface IGameService : IService<GameEntity>
     {
-        Task<IEnumerable<GameEntity>> GetGamesByCategoryAsync(int categoryId);
+        Task<IEnumerable<GameEntity>> GetGamesByCategoryAsync(Guid categoryId);
         Task<IEnumerable<GameEntity>> GetTopRatedGamesAsync(int topCount);
         Task<IEnumerable<GameEntity>> SearchGamesAsync(string searchTerm);
     }
